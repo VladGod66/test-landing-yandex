@@ -62,6 +62,7 @@ img {
   position: relative;
   min-height: 812px;
   background-image: url("../images/hero.png");
+  margin-bottom: 48px;
 }
 
 .header__logo {
@@ -168,4 +169,67 @@ img {
   font-size: 16px;
   white-space: nowrap;
   text-transform: uppercase;
+}
+
+.lecture {
+  margin-bottom: 120px;
+}
+
+.lecture__title {
+  width: 335px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+
+.lecture__image {
+  display: block;
+  width: 335px;
+  margin: 0 auto;
+  margin-bottom: 26px;
+}
+
+.lecture__text {
+  display: block;
+  width: 335px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+
+.lecture__srong {
+  color: #f54932;
+}
+
+.lecture__game {
+  margin-bottom: 22px;
+}
+
+.lecture__info {
+  display: block;
+  width: 335px;
+  margin: 0 auto;
+  margin-top: 46px;
+  font-size: 20px;
+}
+
+hr {
+  border: 1px solid #d0d0d0
+}
+
+del {
+  text-decoration-color: red;
+}
+
+.info__qustion {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #3057a2;
 }
