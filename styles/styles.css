@@ -60,7 +60,7 @@ img {
   display: flex;
   width: 213px;
   height: 32px;
-  margin-top: 20px;
+  padding-top: 20px;
   margin-left: 20px;
 }
 
@@ -139,7 +139,7 @@ img {
   display: flex;
   overflow: hidden;
   height: 38px;
-  margin-top: 330px;
+  margin-top: 320px;
   color: #ffffff;
   background-color: #f54932;
 }
