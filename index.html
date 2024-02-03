@@ -9,13 +9,28 @@
         <title>Тестовый лэндинг Yandex Form.</title>
         <link rel="icon" href="favicon.ico">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
 
     <body>
         <div class="page-container">
-          <header>
-            <h1>Начало работы!</h1>
+          <header class="header">
+            <div class="header__logo">
+              <img class="header__logo-image" src="images/horse.svg" width="19" height="27" alt="Фигура конь">
+              <img class="header__logo-image" src="images/horse.svg" width="19" height="27" alt="Фигура конь">
+              <img class="header__logo-image" src="images/horse.svg" width="19" height="27" alt="Фигура конь">
+              <img class="header__logo-image" src="images/horse.svg" width="19" height="27" alt="Фигура конь">
+              <h1 class="header__logo-text">Клуб<br>четырёх коней</h1>
+            </div>
+            <div class="header__hero">
+              <h2 class="header__hero-title">Превратите уездный город<br><span class="header__hero-span1">в столицу</span><span class="header__hero-span2">земного шара</span></h2>
+              <p class="header__hero-text">Оплатите взнос на телеграммы<br>для организации Международного васюкинского турнира по шахматам</p>
+              <a class="header__hero-unchor" href="#">Поддержать шахматную мысль</a>
+              <a class="header__hero-unchor header__hero-unchor--color" href="#">Подробнее о турнире</a>
+            </div>
+            <div class="header__ticker">
+              <h3 class="header__ticker-text">• Дело помощи утопающим — дело рук самих утопающих! • Шахматы двигают вперёд не только культуру, но и экономику! • Лёд тронулся, господа присяжные заседатели! •</h3>
+            </div>
           </header>
 
           <main>
@@ -30,5 +45,6 @@
             </div>
           </footer>
         </div>
+        <script defer src="js/ticker.js"></script>
     </body>
 </html>

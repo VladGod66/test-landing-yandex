@@ -19,9 +19,9 @@ html {
 }
 
 body {
-  min-width: 375px;
+  width: 375px;
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
   font-family: "GolosText", "Arial", sans-serif;
   font-size: 18px;
   line-height: 120%;
@@ -48,4 +48,108 @@ img {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.header {
+  position: relative;
+  min-height: 812px;
+  background-image: url("../images/hero.png");
+}
+
+.header__logo {
+  display: flex;
+  width: 213px;
+  height: 32px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.header__logo-image {
+  margin-left: 2px;
+}
+
+.header__logo-text {
+  font-size: 14px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.header__hero {
+  width: 335px;
+  margin: 0 auto;
+}
+
+.header__hero-title {
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.header__hero-span1 {
+  display: block;
+  text-align: center;
+}
+
+.header__hero-span2 {
+  display: block;
+  text-align: right;
+}
+
+.header__hero-text {
+  line-height: 130%
+}
+
+.header__hero-unchor {
+  display: block;
+  width: 335px;
+  min-height: 35px;
+  height: auto;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #1f1f1f;
+  border-radius: 24px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 12px;
+  margin-bottom: 14px;
+  transition: all 0.15s ease-in;
+
+  &:hover {
+    color: #1f1f1f;
+    background-color: #fbce51;
+    transition: all 0.15s ease-in;
+  }
+}
+
+.header__hero-unchor--color {
+  color: #313131;
+  background-color: #ffffff;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #1f1f1f;
+    transition: all 0.15s ease-in;
+  }
+}
+
+.header__ticker {
+  display: flex;
+  overflow: hidden;
+  height: 38px;
+  margin-top: 330px;
+  color: #ffffff;
+  background-color: #f54932;
+}
+
+.header__ticker-text {
+  margin: 0;
+  align-self: center;
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
+  text-transform: uppercase;
 }
