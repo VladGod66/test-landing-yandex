@@ -233,3 +233,172 @@ del {
   font-size: 18px;
   color: #3057a2;
 }
+
+.stages {
+  position: relative;
+  width: 335px;
+  margin: 0 auto;
+}
+
+.stages__title {
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.stages__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #3057a2;
+  margin-bottom: 130px;
+}
+
+.stages__image {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  content: "";
+  width: 335px;
+  height: 182px;
+  z-index: 1;
+}
+
+.slider {
+  width: 335px;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.slider__box {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider__card {
+  display: flex;
+  height: 300px;
+  background-image: url("/test-landing-yandex/images/slider-background.png");
+}
+
+.slider__card-content {
+  box-sizing: border-box;
+  width: 335px;
+  padding: 80px 20px 35px 20px;
+}
+
+.slider__card-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.slider__card-number {
+  display: inline-block;
+  width: 36px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 7px;
+  font-weight: 700;
+}
+
+.slider__card-text {
+  width: 240px;
+  margin: 0;
+
+}
+
+.slider__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  height: 36px;
+  margin: 0 auto;
+ }
+
+.slider__dots-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 75px;
+}
+
+.slider__prev-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #313131;
+  cursor: pointer;
+  background-image: url("/test-landing-yandex/images/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  z-index: 1;
+
+  &:hover {
+    background-color: #fbce51;
+  }
+
+  &:active {
+    background-color: #313131;
+  }
+}
+
+.slider__next-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #313131;
+  cursor: pointer;
+  background-image: url("/test-landing-yandex/images/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  z-index: 1;
+
+  &:hover {
+    background-color: #fbce51;
+  }
+
+  &:active {
+    background-color: #313131;
+  }
+}
+
+.slider__prev-button--disable,
+.slider__next-button--disable {
+  opacity: 20%;
+
+  &:hover {
+    background-color: #313131;
+    cursor: default;
+  }
+}
+
+.slider__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+
+  &:hover {
+    opacity: 50%;
+    cursor: pointer;
+  }
+}
+
+.slider__dot--active {
+  background-color: #313131;
+
+  &:hover {
+    opacity: 100%;
+    cursor: default;
+  }
+}
+
