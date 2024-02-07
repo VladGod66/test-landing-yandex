@@ -246,6 +246,8 @@ del {
   font-weight: 400;
   line-height: 110%;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .stages__subtitle {
@@ -253,11 +255,13 @@ del {
   font-weight: 400;
   color: #3057a2;
   margin-bottom: 130px;
+  margin: 0;
+  margin-bottom: 148px;
 }
 
 .stages__image {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: 0;
   content: "";
   width: 335px;
@@ -286,13 +290,13 @@ del {
 .slider__card-content {
   box-sizing: border-box;
   width: 335px;
-  padding: 80px 20px 35px 20px;
+  padding: 63px 23px 35px 20px;
 }
 
 .slider__card-block {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 
 .slider__card-number {
