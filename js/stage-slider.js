@@ -1,7 +1,7 @@
 //Скрипт горизонтального слайдера для секции stages
 
 //Находим контейнер слайдера
-const sliderImages = document.querySelector('.slider__box');
+const sliderBox = document.querySelector('.slider__box');
 //Находим кнопку назад
 const prevButton = document.querySelector('.slider__prev-button');
 //Находим кнопку вперёд
@@ -9,7 +9,7 @@ const nextButton = document.querySelector('.slider__next-button');
 //Создаём массивоподобную коллекцию классов точек индикатора
 const dots = document.querySelectorAll('.slider__dot');
 //Создаём массив из найденных в контейнере слайдера карточек
-const slides = sliderImages.querySelectorAll('.slider__card');
+const slides = sliderBox.querySelectorAll('.slider__card');
 //Определяем количество изображений в массиве
 const slideCount = slides.length;
 //Создаём индекс активного слайда
@@ -22,11 +22,11 @@ let dotIndex = 0;
 //Функция перемещения флекса массива изображений в окне просмотра на заданное изображение
 const slide = () => {
   //Определяем ширину видимой области слайдера в пикселях
-  const imageWidth = sliderImages.clientWidth;
+  const imageWidth = sliderBox.clientWidth;
   //Рассчитываем сдвиг флекса массива изображений в пикселях
   const slideOffset = slideIndex * imageWidth;
   //Сдвигаем флекс массива изображений на рассчитаное количество пикселей
-  sliderImages.style.transform = `translateX(${-slideOffset}px)`;
+  sliderBox.style.transform = `translateX(${-slideOffset}px)`;
 }
 
 //Функция смены активной точки индикатора

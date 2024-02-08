@@ -19,4 +19,5 @@ function ticker(selector, speed) {
 //after window is completed load
 //1 class selector for marquee
 //2 marquee speed 0.2
-window.addEventListener('load', ticker('.header__ticker', 0.4))
+window.addEventListener('load', ticker('.header__ticker', 0.4));
+window.addEventListener('load', ticker('.footer__ticker', 0.4))

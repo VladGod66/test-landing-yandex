@@ -33,7 +33,7 @@
             </div>
           </header>
 
-          <main>
+          <main class="main">
             <section class="lecture">
               <h2 class="lecture__title">Чтобы поддержать Международный васюкинский турнир</h2>
               <img class="lecture__image" src="images/match.png" width="335" height="213" alt="Люди играют в шахматы">
@@ -65,7 +65,7 @@
                 <h4 class="visually-hidden">Слайдер с источниками обогащения.</h3>
                 <div class="slider__box">
                   <div class="slider__card">
-                    <div class="slider__card-content">
+                    <div>
                       <div class="slider__card-block">
                         <span class="slider__card-number">1</span>
                         <p class="slider__card-text">Строительство железнодорожной магистрали Москва-Васюки</p>
@@ -130,11 +130,65 @@
                 </button>
               </div>
             </section>
-
-
+            <section class="participants">
+              <h2 class="participants__title">Участники турнира</h2>
+              <div class="participants__slider participant">
+                <h3 class="visually-hidden">Слайдер с участниками турнира.</h3>
+                <div class="participant__box">
+                  <div class="participant__card">
+                    <img src="/test-landing-yandex/images/participant.png" width="244" height="244" alt="">
+                    <h4 class="participant__name">Хозе-Рауль Капабланка</h4>
+                    <p class="participant__level">Чемпион мира по шахматам</p>
+                    <a class="participant__info" href="#">Подробнее</a>
+                  </div>
+                  <div class="participant__card">
+                    <img src="/test-landing-yandex/images/participant.png" width="244" height="244" alt="">
+                    <h4 class="participant__name">Эммануил Ласкер</h4>
+                    <p class="participant__level">Чемпион мира по шахматам</p>
+                    <a class="participant__info" href="#">Подробнее</a>
+                  </div>
+                  <div class="participant__card">
+                    <img src="/test-landing-yandex/images/participant.png" width="244" height="244" alt="">
+                    <h4 class="participant__name">Александр Алехин</h4>
+                    <p class="participant__level">Чемпион мира по шахматам</p>
+                    <a class="participant__info" href="#">Подробнее</a>
+                  </div>
+                  <div class="participant__card">
+                    <img src="/test-landing-yandex/images/participant.png" width="244" height="244" alt="">
+                    <h4 class="participant__name">Арон Нимцович</h4>
+                    <p class="participant__level">Чемпион мира по шахматам</p>
+                    <a class="participant__info" href="#">Подробнее</a>
+                  </div>
+                  <div class="participant__card">
+                    <img src="/test-landing-yandex/images/participant.png" width="244" height="244" alt="">
+                    <h4 class="participant__name">Рихард Рети</h4>
+                    <p class="participant__level">Чемпион мира по шахматам</p>
+                    <a class="participant__info" href="#">Подробнее</a>
+                  </div>
+                  <div class="participant__card">
+                    <img src="/test-landing-yandex/images/participant.png" width="244" height="244" alt="">
+                    <h4 class="participant__name">Остап Бендер</h4>
+                    <p class="participant__level">Гроссмейстер</p>
+                    <a class="participant__info" href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="participant__nav">
+                <button class="participant__prev-button" type="button" title="Назад">
+                  <span class="visually-hidden">Кнопка назад.</span>
+                </button>
+                <div class="participant__count-wrapper">
+                  <span class="participant__counter"></span><span>/</span><span class="participant__count"></span>
+                </div>
+                <button class="participant__next-button" type="button" title="Вперёд">
+                  <span class="visually-hidden">Кнопка вперёд.</span>
+                </button>
+              </div>
+            </section>
           </main>
 
           <footer >
+
             <div class="footer-container">
 
             </div>
@@ -142,5 +196,6 @@
         </div>
         <script defer src="js/ticker.js"></script>
         <script defer src="js/stage-slider.js"></script>
+        <script defer src="js/participants-slider.js"></script>
     </body>
 </html>
