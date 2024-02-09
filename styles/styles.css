@@ -64,13 +64,13 @@ img {
 
 .header {
   position: relative;
-  min-height: 812px;
   background-image: url("../images/hero.png");
   margin-bottom: 48px;
 
   @media (min-width: 1366px) {
     background-image: url("../images/hero-descktop.png");
     background-repeat: no-repeat;
+    margin-bottom: 80px;
   }
 }
 
@@ -215,7 +215,7 @@ img {
     padding: 13px 80px 0 80px;
     border: 2px solid #1f1f1f;
     background: none;
-    
+
   }
 }
 
@@ -229,7 +229,8 @@ img {
   background-color: #f54932;
 
   @media (min-width: 1366px) {
-    margin-top: 115px;
+    height: 60px;
+    margin-top: 116px;
   }
 }
 
@@ -244,10 +245,18 @@ img {
   font-size: 16px;
   white-space: nowrap;
   text-transform: uppercase;
+
+  @media (min-width: 1366px) {
+    font-size: 22px;
+  }
 }
 
 .lecture {
   margin-bottom: 120px;
+
+  @media (min-width: 1366px) {
+    position: relative;
+  }
 }
 
 .lecture__title {
@@ -259,6 +268,14 @@ img {
   font-size: 28px;
   line-height: 135%;
   text-transform: uppercase;
+
+  @media (min-width: 1366px) {
+    width: 800px;
+    margin: 0;
+    padding-top: 30px;
+    margin-left: 72px;
+    font-size: 36px;
+  }
 }
 
 .lecture__image {
@@ -266,25 +283,79 @@ img {
   width: 335px;
   margin: 0 auto;
   margin-bottom: 26px;
+
+  @media (min-width: 1366px) {
+    position: absolute;
+    top: 0;
+    right: 72px;
+    width: 394px;
+    margin: 0;
+  }
 }
 
 .lecture__text {
   display: block;
+  box-sizing: border-box;
   width: 335px;
   margin: 0 auto;
   margin-bottom: 34px;
+  padding-right: 40px;
   font-family: "Merriweather", "Arial", sans-serif;
   font-size: 28px;
   line-height: 135%;
   text-transform: uppercase;
+
+  @media (min-width: 1366px) {
+    width: 764px;
+    margin: 0;
+    margin-left: 60px;
+    margin-bottom: 62px;
+    font-size: 36px;
+  }
 }
 
-.lecture__srong {
+.lecture__strong {
   color: #f54932;
+}
+
+.lecture__wrapper {
+  @media (min-width: 1366px) {
+    display: grid;
+    grid-template-columns: 530px 704px;
+    grid-template-rows: 147px 336px;
+    gap: 16px;
+    margin-left: 44px;
+  }
+}
+
+.lecture__wrapper-text {
+  display: block;
+  box-sizing: border-box;
+  width: 335px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  padding-right: 40px;
+  font-family: "Merriweather", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 135%;
+  text-transform: uppercase;
+
+  @media (min-width: 1366px) {
+    width: 710px;
+    margin: 0;
+    margin-top: 30px;
+    font-size: 36px;
+  }
 }
 
 .lecture__game {
   margin-bottom: 22px;
+
+  @media (min-width: 1366px) {
+    grid-column: 1/1;
+    grid-row: 1/2;
+    width: 530px;
+  }
 }
 
 .lecture__info {
@@ -293,6 +364,58 @@ img {
   margin: 0 auto;
   margin-top: 46px;
   font-size: 20px;
+
+  @media (min-width: 1366px) {
+    position: relative;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    width: 710px;
+    margin: 0;
+    margin-top: 65px;
+
+    &::after {
+      position: absolute;
+      transform: rotate(90deg) translate(-184px, -182px);
+      width: 248px;
+      height: 2px;
+      content: "";
+      background-color: #d0d0d0;
+    }
+  }
+}
+
+.info__wrapper {
+  display: block;
+
+  @media (min-width: 1366px) {
+    display: grid;
+    grid-template-columns: 322px 380px;
+    grid-template-rows: 40px;
+    width: 710px;
+    height: 34px;
+  }
+}
+
+.info__wrapper span {
+
+  @media (min-width: 1366px) {
+    grid-column: 1/1;
+    align-self: center;
+  }
+}
+
+.info__wrapper p {
+  @media (min-width: 1366px) {
+    display: flex;
+  }
+}
+
+.info__wrapper b {
+
+  @media (min-width: 1366px) {
+    grid-column: 2/2;
+    align-self: center;
+  }
 }
 
 hr {
@@ -307,6 +430,12 @@ del {
   margin-top: 40px;
   font-size: 18px;
   color: #3057a2;
+
+  @media (min-width: 1366px) {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 47px;
+  }
 }
 
 .stages {
