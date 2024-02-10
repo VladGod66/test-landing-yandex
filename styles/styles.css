@@ -256,6 +256,7 @@ img {
 
   @media (min-width: 1366px) {
     position: relative;
+    margin-bottom: 200px;
   }
 }
 
@@ -375,7 +376,7 @@ img {
 
     &::after {
       position: absolute;
-      transform: rotate(90deg) translate(-184px, -182px);
+      transform: rotate(90deg) translate(-193px, -182px);
       width: 248px;
       height: 2px;
       content: "";
@@ -453,6 +454,15 @@ del {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
+
+  @media (min-width: 1366px) {
+    position: relative;
+    width: 800px;
+    margin: 0;
+    margin-left: 72px;
+    margin-bottom: 54px;
+    font-size: 54px;
+  }
 }
 
 .stages__subtitle {
@@ -462,6 +472,14 @@ del {
   margin-bottom: 130px;
   margin: 0;
   margin-bottom: 148px;
+
+  @media (min-width: 1366px) {
+    position: absolute;
+    top: 65px;
+    left: 380px;
+    width: 280px;
+    margin: 0;
+  }
 }
 
 .stages__image {
@@ -487,10 +505,11 @@ del {
 }
 
 .slider__card {
-  display: flex;
-  height: 300px;
-  box-sizing: border-box;
   width: 335px;
+  height: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
   padding: 63px 20px 35px 20px;
   background-image: url("/test-landing-yandex/images/slider-background.png");
 }
