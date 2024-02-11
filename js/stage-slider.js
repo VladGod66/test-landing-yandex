@@ -10,8 +10,8 @@ const nextButton = document.querySelector('.slider__next-button');
 const dots = document.querySelectorAll('.slider__dot');
 //Создаём массив из найденных в контейнере слайдера карточек
 const slides = sliderBox.querySelectorAll('.slider__card');
-//Определяем количество изображений в массиве
-const slideCount = slides.length;
+//Определяем количество карточек в массиве
+const slideCount = slides.length-4;
 //Создаём индекс активного слайда
 let slideIndex = 0;
 //Создаём индекс направления перемещения (1-вперёд, 0-назад)
