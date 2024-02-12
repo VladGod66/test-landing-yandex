@@ -9,11 +9,12 @@ const participantNextButton = document.querySelector('.participant__next-button'
 //Создаём массивоподобную коллекцию изображений участников
 const participantSlides = sliderImages.querySelectorAll('img');
 //Определяем интервал автоматического перелистывания слайдов
-const interval = 4000000;
+const interval = 4000;
 //Определяем количество изображений в массиве
 let participantSlideCount = participantSlides.length;
+//Если вьюпорт десктоп, ограничиваем уменьшааем длину перемещения
 if (window.screen.width >= 1366) {
-  participantSlideCount = participantSlides.length/3;
+  participantSlideCount = participantSlideCount-2;
 }
 //Создаём индекс активного слайда
 let paticipantSlideIndex = 0;
@@ -24,13 +25,18 @@ let paticipantDirectionIndex = 1;
 //Функция перемещения флекса массива изображений в окне просмотра на заданное изображение
 const paticipantsSlide = () => {
   //Определяем ширину видимой области слайдера в пикселях
-  const imageWidth = sliderImages.clientWidth;
+  let imageWidth = sliderImages.clientWidth;
+  if (window.screen.width >= 1366) {
+    imageWidth = sliderImages.clientWidth/3
+  }
   //Рассчитываем сдвиг флекса массива изображений в пикселях
   const slideOffset = paticipantSlideIndex * imageWidth;
   //Сдвигаем флекс массива изображений на рассчитаное количество пикселей
   sliderImages.style.transform = `translateX(${-slideOffset}px)`;
   //Выводим в разметку номер текущего слайда
-  document.querySelector('.participant__counter').textContent = paticipantSlideIndex+1;
+  if (window.screen.width >= 1366) {
+  document.querySelector('.participant__counter').textContent = paticipantSlideIndex+3;
+  } else document.querySelector('.participant__counter').textContent = paticipantSlideIndex+1;
 }
 
 //Функция смены направления перемещения слайдов при необходимости
@@ -75,21 +81,24 @@ window.addEventListener('load', () => {
   paticipantsSlide();
 });
 
-//При увеличении размера вьюпорта до 1366px и выше переставляем слайдер в начальное положение
+//При увеличении размера вьюпорта выше 1366px и обратно переставляем слайдер в начальное положение
 window.addEventListener('resize', () => {
   if (window.matchMedia('(min-width: 1366px)').matches) {
     paticipantSlideIndex = 0;
     paticipantChangeSlide(0);
-    participantSlideCount = participantSlides.length/3;
+    participantSlideCount = participantSlides.length;
     document.querySelector('.participant__count').textContent = participantSlideCount;
+    participantSlideCount = participantSlideCount-2;
   } else {
-      participantSlideCount = participantSlides.length;
-      document.querySelector('.participant__count').textContent = participantSlideCount;
+    paticipantSlideIndex = 0;
+    paticipantChangeSlide(0);
+    participantSlideCount = participantSlides.length;
+    document.querySelector('.participant__count').textContent = participantSlideCount;
   }
 });
 
 //Выводим в разметку количество слайдов в слайдере
-document.querySelector('.participant__count').textContent = participantSlideCount;
+document.querySelector('.participant__count').textContent = participantSlides.length ;
 
 //Запускаем встроенную в браузер функцию автоматического перелистывания слайдов
 setInterval(() => {paticipantsNextSlide()}, interval)

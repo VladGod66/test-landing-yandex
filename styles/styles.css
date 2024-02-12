@@ -447,7 +447,7 @@ del {
 
   @media (min-width: 1366px) {
     width: 1222px;
-    margin-bottom: 200px;
+    margin-bottom: 201px;
   }
 }
 
@@ -787,7 +787,7 @@ del {
     position: relative;
     font-size: 54px;
     line-height: 120%;
-    margin-bottom: 60px;
+    margin-bottom: 59px;
   }
 }
 
@@ -806,11 +806,15 @@ del {
   display: flex;
   transition: transform 0.5s ease-in-out;
   margin-bottom: 20px;
+
+  @media (min-width: 1366px) {
+    padding-left: 12px;
+  }
 }
 
 .participant__card {
   @media (min-width: 1366px){
-    margin-right: 18px;
+    margin-right: 48px;
   }
 }
 
@@ -833,7 +837,8 @@ del {
   text-align: center;
 
   @media (min-width: 1366px) {
-    width: 390px;
+    width: 359px;
+    margin-bottom: 12px;
   }
 }
 
@@ -844,6 +849,10 @@ del {
   font-weight: 700;
   opacity: 60%;
   text-align: center;
+
+  @media (min-width: 1366px) {
+    margin-bottom: 20px;
+  }
 }
 
 .participant__info{
@@ -859,6 +868,11 @@ del {
   border-radius: 24px;
   text-align: center;
   transition: all 0.15s ease-in;
+
+  @media (min-width: 1366px) {
+    min-height: 26px;
+    font-weight: 600;
+  }
 
   &:hover {
     color: #ffffff;
@@ -877,8 +891,10 @@ del {
   @media (min-width: 1366px) {
     position: absolute;
     content: "";
-    top: 10px;
-    right: 0;
+    top: 9px;
+    right: 0px;
+    width: 151px;
+    height: 44px;
   }
  }
 
@@ -889,11 +905,17 @@ del {
   border: none;
   background-color: #313131;
   cursor: pointer;
-  background-image: url("/test-landing-yandex/images/arrow-left.svg");
+  background-image: url("../images/arrow-left.svg");
   background-repeat: no-repeat;
   background-position: center;
   padding: 0;
   z-index: 1;
+
+  @media (min-width: 1366px) {
+    width: 44px;
+    height: 44px;
+    background-image: url("../images/arrow-left-desktop.svg");
+  }
 
   &:hover {
     background-color: #fbce51;
@@ -909,6 +931,10 @@ del {
   justify-content: space-between;
   align-self: center;
   width: 30px;
+
+  @media (min-width: 1366px) {
+    width: 35px;
+  }
 }
 
 .participant__counter {
@@ -932,6 +958,12 @@ del {
   background-position: center;
   padding: 0;
   z-index: 1;
+
+  @media (min-width: 1366px) {
+    width: 44px;
+    height: 44px;
+    background-image: url("../images/arrow-right-desktop.svg");
+  }
 
   &:hover {
     background-color: #fbce51;
