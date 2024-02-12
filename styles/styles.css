@@ -447,6 +447,7 @@ del {
 
   @media (min-width: 1366px) {
     width: 1222px;
+    margin-bottom: 200px;
   }
 }
 
@@ -765,6 +766,12 @@ del {
   width: 335px;
   margin: 0 auto;
   margin-bottom: 100px;
+
+  @media (min-width: 1366px) {
+    position: relative;
+    width: 1222px;
+    margin-bottom: 118px;
+  }
 }
 
 .participants__title {
@@ -775,6 +782,13 @@ del {
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: 1366px) {
+    position: relative;
+    font-size: 54px;
+    line-height: 120%;
+    margin-bottom: 60px;
+  }
 }
 
 .participant {
@@ -782,6 +796,10 @@ del {
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: 20px;
+
+  @media (min-width: 1366px) {
+    width: 1222px;
+  }
 }
 
 .participant__box {
@@ -790,11 +808,21 @@ del {
   margin-bottom: 20px;
 }
 
+.participant__card {
+  @media (min-width: 1366px){
+    margin-right: 18px;
+  }
+}
+
 .participant__card img {
   display: block;
   width: 244px;
   margin: 0 auto;
   margin-bottom: 32px;
+
+  @media (min-width: 1366px) {
+    width: 320px;
+  }
 }
 
 .participant__name {
@@ -803,6 +831,10 @@ del {
   margin-bottom: 14px;
   font-size: 24px;
   text-align: center;
+
+  @media (min-width: 1366px) {
+    width: 390px;
+  }
 }
 
 .participant__level {
@@ -842,6 +874,12 @@ del {
   height: 36px;
   margin: 0 auto;
 
+  @media (min-width: 1366px) {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 0;
+  }
  }
 
 .participant__prev-button {
@@ -924,4 +962,8 @@ del {
   line-height: 120%;
   opacity: 60%;
   background-color: #e9ded4;
+
+  @media (min-width: 1366px) {
+    padding: 41px 72px 72px 72px;
+  }
 }
