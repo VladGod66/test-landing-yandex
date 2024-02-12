@@ -79,9 +79,17 @@ const nextSlide = () => {
   changeSlide(slideIndex);
 }
 
-//При загрузке окна сайта запускаем функцию slide
+//При загрузке окна сайта запускаем слайдер
 window.addEventListener('load', () => {
   slide();
+});
+
+//При увеличении размера вьюпорта до 1366px и выше переставляем слайдер в начальное положение
+window.addEventListener('resize', () => {
+  if (window.matchMedia('(min-width: 1366px)').matches) {
+    slideIndex = 0;
+    changeSlide(0);
+  }
 });
 
 //При клике на кнопку вперёд
