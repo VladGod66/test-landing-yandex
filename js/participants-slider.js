@@ -27,8 +27,9 @@ const paticipantsSlide = () => {
   //Определяем ширину видимой области слайдера в пикселях
   let imageWidth = sliderImages.clientWidth;
   if (window.screen.width >= 1366) {
-    imageWidth = sliderImages.clientWidth/3
+    imageWidth = sliderImages.clientWidth/3 + 7;
   }
+  console.log(imageWidth);
   //Рассчитываем сдвиг флекса массива изображений в пикселях
   const slideOffset = paticipantSlideIndex * imageWidth;
   //Сдвигаем флекс массива изображений на рассчитаное количество пикселей
