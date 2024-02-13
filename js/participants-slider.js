@@ -3,9 +3,9 @@
 //Находим контейнер слайдера
 const sliderImages = document.querySelector('.participant__box');
 //Находим кнопку назад
-const participantPrevButton = document.querySelector('.participant__prev-button');
+const participantPrevButton = document.querySelector('.participants__prev-button');
 //Находим кнопку вперёд
-const participantNextButton = document.querySelector('.participant__next-button');
+const participantNextButton = document.querySelector('.participants__next-button');
 //Создаём массивоподобную коллекцию изображений участников
 const participantSlides = sliderImages.querySelectorAll('img');
 //Определяем интервал автоматического перелистывания слайдов
@@ -36,8 +36,8 @@ const paticipantsSlide = () => {
   sliderImages.style.transform = `translateX(${-slideOffset}px)`;
   //Выводим в разметку номер текущего слайда
   if (window.screen.width >= 1366) {
-  document.querySelector('.participant__counter').textContent = paticipantSlideIndex+3;
-  } else document.querySelector('.participant__counter').textContent = paticipantSlideIndex+1;
+  document.querySelector('.participants__counter').textContent = paticipantSlideIndex+3;
+  } else document.querySelector('.participants__counter').textContent = paticipantSlideIndex+1;
 }
 
 //Функция смены направления перемещения слайдов при необходимости
@@ -88,18 +88,18 @@ window.addEventListener('resize', () => {
     paticipantSlideIndex = 0;
     paticipantChangeSlide(0);
     participantSlideCount = participantSlides.length;
-    document.querySelector('.participant__count').textContent = participantSlideCount;
+    document.querySelector('.participants__count').textContent = participantSlideCount;
     participantSlideCount = participantSlideCount-2;
   } else {
     paticipantSlideIndex = 0;
     paticipantChangeSlide(0);
     participantSlideCount = participantSlides.length;
-    document.querySelector('.participant__count').textContent = participantSlideCount;
+    document.querySelector('.participants__count').textContent = participantSlideCount;
   }
 });
 
 //Выводим в разметку количество слайдов в слайдере
-document.querySelector('.participant__count').textContent = participantSlides.length ;
+document.querySelector('.participants__count').textContent = participantSlides.length ;
 
 //Запускаем встроенную в браузер функцию автоматического перелистывания слайдов
 setInterval(() => {paticipantsNextSlide()}, interval)

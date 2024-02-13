@@ -3,11 +3,11 @@
 //Находим контейнер слайдера
 const sliderBox = document.querySelector('.slider__box');
 //Находим кнопку назад
-const prevButton = document.querySelector('.slider__prev-button');
+const prevButton = document.querySelector('.slider-nav__prev-button');
 //Находим кнопку вперёд
-const nextButton = document.querySelector('.slider__next-button');
+const nextButton = document.querySelector('.slider-nav__next-button');
 //Создаём массивоподобную коллекцию классов точек индикатора
-const dots = document.querySelectorAll('.slider__dot');
+const dots = document.querySelectorAll('.nav__dot');
 //Создаём массив из найденных в контейнере слайдера карточек
 const slides = sliderBox.querySelectorAll('.slider__card');
 //Определяем количество карточек в массиве
@@ -32,12 +32,12 @@ const slide = () => {
 //Функция смены активной точки индикатора
 const thisSlide = (index) => {
   //Для каждого класса slider__dot в псевдомассиве dots
-  for (let slider__dot of dots) {
+  for (let nav__dot of dots) {
     //Удаляем класс активной точки индикатора
-    slider__dot.classList.remove('slider__dot--active')
+    nav__dot.classList.remove('nav__dot--active')
   }
   //Добавляем класс активной точки индикатора классу с заданным индексом в псевдомассиве
-  dots[index].classList.add('slider__dot--active')
+  dots[index].classList.add('nav__dot--active')
 }
 
 //Функция смены направления перемещения слайдов при необходимости
@@ -99,12 +99,12 @@ nextButton.addEventListener('click', () => {
     //То остаёмся на последнем
     slideIndex = slideCount-1;
     //Добавляем класс неактивной кнопки
-    nextButton.classList.add('slider__next-button--disable');
+    nextButton.classList.add('slider-nav__next-button--disable');
   } else {
     //Увеличиваем индекс нового активного слайда
     slideIndex++;
     //Убираем класс неактивной противоположной кнопки
-    prevButton.classList.remove('slider__prev-button--disable');
+    prevButton.classList.remove('slider-nav__prev-button--disable');
   }
   //Запускаем суперфункцию смены слайда
   changeSlide(slideIndex);
@@ -117,12 +117,12 @@ prevButton.addEventListener('click', () => {
     //То остаёмся на первом
     slideIndex = 0;
     //Добавляем класс неактивной кнопки
-    prevButton.classList.add('slider__prev-button--disable');
+    prevButton.classList.add('slider-nav__prev-button--disable');
   } else {
     //Уменьшаем индекс слайда на единицу
     slideIndex--;
     //Убираем класс противоположной неактивной кнопки
-    nextButton.classList.remove('slider__next-button--disable');
+    nextButton.classList.remove('slider-nav__next-button--disable');
   }
   //Запускаем суперфункцию смены слайда
   changeSlide(slideIndex);
@@ -136,8 +136,8 @@ dots.forEach((slider__dot, index) => {
     //Присваеваем индексу слайда индекс кликнутой точки
     slideIndex = index;
     //Убираем класс возможно неактивных кнопок
-    nextButton.classList.remove('slider__next-button--disable');
-    prevButton.classList.remove('slider__prev-button--disable');
+    nextButton.classList.remove('slider-nav__next-button--disable');
+    prevButton.classList.remove('slider-nav__prev-button--disable');
     //Запускаем суперфункцию смены слайда
     changeSlide(slideIndex);
   })
